@@ -1,0 +1,24 @@
+/* Increase the max-width of the content area */
+.wy-nav-content {
+    /* Use 'none' for full width or '1200px' for a wide limit */
+    max-width: none !important; 
+}
+
+/* Limit the logo size in the sidebar */
+.wy-side-nav-search img.logo {
+    height: auto;       /* Maintain aspect ratio */
+    width: 100px;       /* Set desired width */
+    max-width: 50%;    /* Ensure it doesn't overflow the sidebar */
+    display: block;
+    margin: 0 auto;     /* Center the logo */
+}
+
+/* For the main body text */
+.wy-nav-content-wrap {
+    font-size: 20; /* Adjust as needed */
+}
+
+/* For the sidebar menu */
+.wy-menu-vertical {
+    font-size: 18px;
+}
