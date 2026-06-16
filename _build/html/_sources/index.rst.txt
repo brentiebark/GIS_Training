@@ -1,0 +1,44 @@
+.. sphinx_essc_geo documentation master file, created by
+   sphinx-quickstart on Tue May 15, 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+=============================================================================
+GIS for Training Southern Luzon Landscape using Free and Open Source Software
+=============================================================================
+
+This course is designed to equip participants with the essential skills needed to
+effectively utilize open-source GIS software. Through this training, participants
+will learn foundational cartographic tools and techniques that are crucial for performing fundamental GIS analyses.
+
+
+Contents
+---------
+
+.. toctree::
+   :maxdepth: 1
+
+   About this document <about.rst>
+   Basic GIS with Quantum GIS <intro_qgis_course.rst>
+   QGIS Installation for MS Windows, Mac OSX and Ubuntu Linux <qgis_install.rst>
+   Sample Datasets <sample_datasets.rst>
+   The QGIS Interface <qgis_interface.rst>
+   Managing Data Attributes <qgis_attributes.rst>
+   Table Join and Relate <qgis_table_join_and_relate.rst>
+   QGIS Plugins <qgis_plugins.rst>
+   Creating Vector Layers (Digitizing) <qgis_digitizing_sc.rst>
+   Rectifying Raster Data <qgis_raster_rectify.rst>
+   Map Design with Layout Manager <qgis_map_composer.rst>
+
+About CI
+--------
+
+
+Since 1995, Conservation International Philippines Foundation, Inc. (CIPFI) has been working with indigenous communities, government agencies to promote solutions to major environmental issues such as deforestation, climate change, illegal wildlife trade, as well as destructive fishing practices.
+
+In 2015, Conservation International was registered as a non-stock and non-profit corporation with the Securities and Exchange Commission (SEC). Currently, there are approximately 60 staff members working in various locations in the Philippines, from forests and watersheds in Mount Mantalingahan in Palawan, as well as in the Verde Island Passage and various cities throughout the country. CI has offices in Quezon City, Puerto Princesa, and Brooke’s Point.
+
+
+Is there anything else you'd like help with? 🌟
+
+More information about Conservation International Philippines: `Official website <https://www.conservation.org/philippines>`_ `Facebook Page <https://www.facebook.com/ConservationInternationalPH/>`_

@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Table Join and Relate &mdash; Conservation International</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=27445f8b" />
+
+  
+    <link rel="shortcut icon" href="_static/CI_Logo_single.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. QGIS Plugins" href="qgis_plugins.html" />
+    <link rel="prev" title="4. Managing Data Attributes" href="qgis_attributes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GIS Training for Southern Luzon Landscape using Free and Open Source Software
+              <img src="_static/CI_Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About this document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="intro_qgis_course.html">Basic GIS with Quantum GIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_install.html">1. QGIS Installation for MS Windows, MacOS and Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_datasets.html">2. Sample Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_interface.html">3. The QGIS Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_attributes.html">4. Managing Data Attributes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Table Join and Relate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-project">5.1. Creating a new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#join-aspatial-to-spatial-data">5.2. Join Aspatial to Spatial Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#additional-youtube-video">5.2.1. Additional Youtube Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_plugins.html">6. QGIS Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_digitizing_sc.html">7. Creating Vector Layers (Digitizing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_raster_rectify.html">8. Rectifying Raster Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_map_composer.html">9. Map Design with Layout Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_install.html">1. QGIS Installation for MS Windows, Mac OSX and Ubuntu Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample_datasets.html">2. Sample Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_interface.html">3. The QGIS Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_attributes.html">4. Managing Data Attributes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Table Join and Relate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-new-project">5.1. Creating a new project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#join-aspatial-to-spatial-data">5.2. Join Aspatial to Spatial Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#additional-youtube-video">5.2.1. Additional Youtube Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_plugins.html">6. QGIS Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_digitizing_sc.html">7. Creating Vector Layers (Digitizing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_raster_rectify.html">8. Rectifying Raster Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_map_composer.html">9. Map Design with Layout Manager</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GIS Training for Southern Luzon Landscape using Free and Open Source Software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="intro_qgis_course.html">Basic GIS using QGIS</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Table Join and Relate</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/qgis_table_join_and_relate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="table-join-and-relate">
+<h1><span class="section-number">5. </span>Table Join and Relate<a class="headerlink" href="#table-join-and-relate" title="Link to this heading"></a></h1>
+<p>QGIS is capable to manage database by joining and relating attributes from different dataset given that they have <cite>Identifier</cite>.</p>
+<section id="creating-a-new-project">
+<h2><span class="section-number">5.1. </span>Creating a new project<a class="headerlink" href="#creating-a-new-project" title="Link to this heading"></a></h2>
+<p>1. Open QGIS and create a new project. In the menu toolbar,
+click the <a class="reference internal" href="_images/mActionFileNew.svg"><img alt="mActionFileNew" src="_images/mActionFileNew.svg" style="width: 30pt;" /></a> icon.</p>
+<p>2. Open <span class="guilabel">Project Properties</span> and click the <span class="guilabel">Coordinate Reference System (CRS)</span> tab.
+Set the following option.</p>
+<ul class="simple">
+<li><p>In the Coordinate Reference System, choose
+<span class="guilabel">Geographic Coordinate Systems –&gt; WGS 84</span>.</p></li>
+</ul>
+</section>
+<section id="join-aspatial-to-spatial-data">
+<h2><span class="section-number">5.2. </span>Join Aspatial to Spatial Data<a class="headerlink" href="#join-aspatial-to-spatial-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To load vector data, select <span class="guilabel">Layer</span> –&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> –&gt; <span class="guilabel">Add Vector Layer</span>.</p></li>
+<li><p>Open the following the <cite>brgys.shp</cite></p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/qgis_addvector_joinandrelate.png"><img alt="_images/qgis_addvector_joinandrelate.png" class="align-center" src="_images/qgis_addvector_joinandrelate.png" style="width: 1000pt;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Display the shapefile.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/table_attributes.png"><img alt="_images/table_attributes.png" class="align-center" src="_images/table_attributes.png" style="width: 1000pt;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>Examine the attribute table of the shapefile by right-clicking on the shapefile and select <span class="guilabel">Open Attribute Table</span>.</p></li>
+<li><p>Notice the column “pop_2020” has unique number for each on the entry. This is the table’s <span class="guilabel">Identifier</span>. This is the population in 2020 per barangay that wil serve as the identifier.</p></li>
+<li><p>Open the <cite>Valderrama_brgys.csv</cite> in MS Office Excel or LibreOffice Calc.</p></li>
+</ol>
+<p>The .csv should be display similar to what is below. The column “pop_2020” contains the population value. Notice that both brgys.shp and Valderrama_brgys.csv have “pop_2020” column.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/qgis_ca_track_pop_joinandrelate.png"><img alt="_images/qgis_ca_track_pop_joinandrelate.png" class="align-center" src="_images/qgis_ca_track_pop_joinandrelate.png" style="width: 1000pt;" />
+</a>
+</div></blockquote>
+<ol class="arabic" start="7">
+<li><p>Click <span class="guilabel">Layer</span> –&gt; <span class="guilabel">Add Layer</span> <a class="reference internal" href="_images/mActionAddDelimitedTextLayer.svg"><img alt="mActionAddDelimitedTextLayer" src="_images/mActionAddDelimitedTextLayer.svg" style="width: 30pt;" /></a> <span class="guilabel">Add Delimited Text Layer</span>.</p>
+<a class="reference internal image-reference" href="_images/mActionAddDelimitedTextLayer3_2.png"><img alt="_images/mActionAddDelimitedTextLayer3_2.png" class="align-center" src="_images/mActionAddDelimitedTextLayer3_2.png" style="width: 1000pt;" />
+</a>
+</li>
+<li><p>Select the <cite>Valderrama_brgys.csv</cite> file.
+Select “No Geometry” from the <cite>Geometry definition</cite> tab.</p>
+<a class="reference internal image-reference" href="_images/qgis_opentextdelimited_joinandrelate.png"><img alt="_images/qgis_opentextdelimited_joinandrelate.png" class="align-center" src="_images/qgis_opentextdelimited_joinandrelate.png" style="width: 1000pt;" />
+</a>
+</li>
+<li><p>To join the non-spatial identifier data to the spatial shapefile of brgys data, right-click the brgys.shp then select Properties. Select <cite>Joins</cite> tab. Add a join layer by clicking the <strong>+</strong> sign in the lower left portion of the window. Then select “psgc” for the <span class="guilabel">Join field</span> and “psgc” for the <span class="guilabel">Target field</span>. Check the box of <span class="guilabel">Joined Fields</span> and click <cite>pop_2020</cite>. In <span class="guilabel">Custom field name prefix</span>, you may type <cite>Joined</cite>. Select <span class="guilabel">Apply</span>, then <span class="guilabel">OK</span>.</p>
+<a class="reference internal image-reference" href="_images/qgis_joinaddvector_joinandrelate.png"><img alt="_images/qgis_joinaddvector_joinandrelate.png" class="align-center" src="_images/qgis_joinaddvector_joinandrelate.png" style="width: 1000pt;" />
+</a>
+<a class="reference internal image-reference" href="_images/qgis_joinaddvector_joinandrelate2.png"><img alt="_images/qgis_joinaddvector_joinandrelate2.png" class="align-center" src="_images/qgis_joinaddvector_joinandrelate2.png" style="width: 1000pt;" />
+</a>
+</li>
+<li><p>Open the attribute table of the <cite>brys.shp</cite> and scroll up to the last column, you will notice the added <span class="guilabel">joinedpop_2020</span> column which is the “pop_2020” from the .csv file.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/qgis_joinedtable_joinandrelate.png"><img alt="_images/qgis_joinedtable_joinandrelate.png" class="align-center" src="_images/qgis_joinedtable_joinandrelate.png" style="width: 1000pt;" />
+</a>
+</div></blockquote>
+</li>
+<li><p>To display the population, right-click on the shapefile and click <span class="guilabel">Properties</span> then select the <span class="guilabel">Symbology</span> tab. On the classes of Style, instead of <span class="guilabel">Single Symbol</span>, select <span class="guilabel">Categorized</span> and <cite>Spectral</cite> for the color ramp tab. For the value tab click <span class="guilabel">joinedpop_2020</span>. Select <span class="guilabel">Classify</span> , then <span class="guilabel">OK</span>.</p>
+<a class="reference internal image-reference" href="_images/qgis_joinedtable_graduated_joinandrelate.png"><img alt="_images/qgis_joinedtable_graduated_joinandrelate.png" class="align-center" src="_images/qgis_joinedtable_graduated_joinandrelate.png" style="width: 1000pt;" />
+</a>
+</li>
+</ol>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/qgis_joingraduated_joinandrelate.png"><img alt="_images/qgis_joingraduated_joinandrelate.png" class="align-center" src="_images/qgis_joingraduated_joinandrelate.png" style="width: 1000pt;" />
+</a>
+</div></blockquote>
+<section id="additional-youtube-video">
+<h3><span class="section-number">5.2.1. </span>Additional Youtube Video<a class="headerlink" href="#additional-youtube-video" title="Link to this heading"></a></h3>
+<p>For the offline version click this <a class="reference external" href="videos/Table_Join_and_Relate.mp4">link</a>.</p>
+<div style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/zyFGnGcn6FM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qgis_attributes.html" class="btn btn-neutral float-left" title="4. Managing Data Attributes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qgis_plugins.html" class="btn btn-neutral float-right" title="6. QGIS Plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, https://conservation.org license under GNU Free Document License.
+      <span class="lastupdated">Last updated on Jun 16, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

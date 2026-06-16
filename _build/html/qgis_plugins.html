@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. QGIS Plugins &mdash; Conservation International</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=27445f8b" />
+
+  
+    <link rel="shortcut icon" href="_static/CI_Logo_single.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Creating Vector Layers (Digitizing)" href="qgis_digitizing_sc.html" />
+    <link rel="prev" title="5. Table Join and Relate" href="qgis_table_join_and_relate.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GIS Training for Southern Luzon Landscape using Free and Open Source Software
+              <img src="_static/CI_Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About this document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="intro_qgis_course.html">Basic GIS with Quantum GIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_install.html">1. QGIS Installation for MS Windows, MacOS and Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_datasets.html">2. Sample Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_interface.html">3. The QGIS Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_attributes.html">4. Managing Data Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_table_join_and_relate.html">5. Table Join and Relate</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6. QGIS Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-new-plugins-using-python-plugin-installer">6.1. Add new plugins using Python Plugin Installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-the-plugins">6.2. Loading the Plugins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#additional-youtube-video">6.2.1. Additional Youtube Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_digitizing_sc.html">7. Creating Vector Layers (Digitizing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_raster_rectify.html">8. Rectifying Raster Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_map_composer.html">9. Map Design with Layout Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_install.html">1. QGIS Installation for MS Windows, Mac OSX and Ubuntu Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample_datasets.html">2. Sample Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_interface.html">3. The QGIS Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_attributes.html">4. Managing Data Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_table_join_and_relate.html">5. Table Join and Relate</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. QGIS Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-new-plugins-using-python-plugin-installer">6.1. Add new plugins using Python Plugin Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-the-plugins">6.2. Loading the Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#additional-youtube-video">6.2.1. Additional Youtube Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_digitizing_sc.html">7. Creating Vector Layers (Digitizing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_raster_rectify.html">8. Rectifying Raster Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_map_composer.html">9. Map Design with Layout Manager</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GIS Training for Southern Luzon Landscape using Free and Open Source Software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="intro_qgis_course.html">Basic GIS using QGIS</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>QGIS Plugins</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/qgis_plugins.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qgis-plugins">
+<h1><span class="section-number">6. </span>QGIS Plugins<a class="headerlink" href="#qgis-plugins" title="Link to this heading"></a></h1>
+<p>QGIS was designed with a flexible and extensible plug-in architecture. This
+allows new features/functions to be easily developed and added to the
+application. Many of the features in QGIS are implemented as plug-ins. Many QGIS
+users are developing their own plug-ins and there is a wealth of plug-ins
+available in the QGIS website.</p>
+<ul class="simple">
+<li><p><strong>Core Plug-ins</strong> are maintained by the QGIS Development Team and are
+automatically part of every QGIS distribution.</p></li>
+<li><p><strong>External Plug-ins</strong> are currently all written in Python. They are stored in
+external repositories and maintained by the individual authors.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You  need a working Internet connection to download and update plugins.</p>
+</div>
+<section id="add-new-plugins-using-python-plugin-installer">
+<h2><span class="section-number">6.1. </span>Add new plugins using Python Plugin Installer<a class="headerlink" href="#add-new-plugins-using-python-plugin-installer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>In order to download and install an external Python plugin, click the menu <span class="guilabel">Plugins</span> –&gt; <a class="reference internal" href="_images/mActionShowPluginManager.svg"><img alt="mActionShowPluginManager" src="_images/mActionShowPluginManager.svg" style="width: 30pt;" /></a> <span class="guilabel">Manage and Install Plugins</span>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/plugin_installer.png"><img alt="_images/plugin_installer.png" class="align-center" src="_images/plugin_installer.png" style="width: 1000pt;" />
+</a>
+<a class="reference internal image-reference" href="_images/plugin_installer_window.png"><img alt="_images/plugin_installer_window.png" class="align-center" src="_images/plugin_installer_window.png" style="width: 1000pt;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>Click the <span class="guilabel">Settings</span> tab.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/plugin_repotab.png"><img alt="_images/plugin_repotab.png" class="align-center" src="_images/plugin_repotab.png" style="width: 1000pt;" />
+</a>
+<p><strong>Settings Tab</strong> - contains a list of plugin repositories available. By default, only the QGIS Official Repository is enabled. You can add several user-contributed repositories, including the central QGIS Contributed Repository and other external repositories by ticking <span class="guilabel">Show also experimental plugins</span> and <span class="guilabel">Show also deprecated plugins</span>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Click the <span class="guilabel">Show also experimental plugins</span> button to download the list of all available plugins.</p></li>
+<li><p>Go back to the list of plugins by clicking the <span class="guilabel">All</span> tab.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Plugins tab</strong> - this tab list all available plugins.  Each plugin can be either:</p></li>
+<li><p><strong>Not installed</strong> - the plugin is available in the repository,but is not installed yet.</p></li>
+<li><p><strong>Installed</strong> - the plugin is already installed. If it is also available in any repository the <span class="guilabel">Reinstall</span> plugin button will be enabled.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>At the <strong>Not installed</strong> tab, find and select the <span class="guilabel">QuickMapServices</span> in the list. Click <span class="guilabel">Install plugin</span> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/plugin_listtab.png"><img alt="_images/plugin_listtab.png" class="align-center" src="_images/plugin_listtab.png" style="width: 1000pt;" />
+</a>
+<p>6. Do this for the following plugins
+as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Street</span> <span class="n">View</span>
+<span class="n">Value</span> <span class="n">Tool</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Once installed, close the <span class="guilabel">Plugins</span> window.</p></li>
+</ol>
+</section>
+<section id="loading-the-plugins">
+<h2><span class="section-number">6.2. </span>Loading the Plugins<a class="headerlink" href="#loading-the-plugins" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the Plugin manager by selecting <span class="guilabel">Plugins</span> –&gt; <a class="reference internal" href="_images/mActionShowPluginManager.svg"><img alt="mActionShowPluginManager" src="_images/mActionShowPluginManager.svg" style="width: 30pt;" /></a> <span class="guilabel">Manage Plugins</span>.</p></li>
+</ol>
+<p>The <span class="guilabel">Plugin Manager</span> lists all the available plug-ins and status (loaded or unloaded), including all core plug-ins and all external plug-ins that have been installed and automatically activated using the Python Plugin Installer. Plug-ins that are already loaded have a check mark to the left of the name.</p>
+<ol class="arabic simple" start="2">
+<li><p>Activate/enable the plugins by clicking its check box or description.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/plugin_manager.png"><img alt="_images/plugin_manager.png" class="align-center" src="_images/plugin_manager.png" style="width: 1000pt;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>You maybe prompted to restart QGIS, close then open QGIS.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In some cases, 3rd party plug-ins (external plug-ins developed by other users)
+can be unstable and can cause your QGIS instance to crash. These plug-ins were
+designed for specific usage of the authors and may not work as expected in
+your own system. Use experimental plug-ins at your own risk!</p>
+</div>
+<section id="additional-youtube-video">
+<h3><span class="section-number">6.2.1. </span>Additional Youtube Video<a class="headerlink" href="#additional-youtube-video" title="Link to this heading"></a></h3>
+<p>Click this <a class="reference external" href="videos/QGIS_Plugins.mp4">link</a> for the offline version.</p>
+<div style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/vCf9crWJVrk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qgis_table_join_and_relate.html" class="btn btn-neutral float-left" title="5. Table Join and Relate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qgis_digitizing_sc.html" class="btn btn-neutral float-right" title="7. Creating Vector Layers (Digitizing)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, https://conservation.org license under GNU Free Document License.
+      <span class="lastupdated">Last updated on Jun 16, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

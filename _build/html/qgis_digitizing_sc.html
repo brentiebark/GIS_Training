@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Creating Vector Layers (Digitizing) &mdash; Conservation International</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=27445f8b" />
+
+  
+    <link rel="shortcut icon" href="_static/CI_Logo_single.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Rectifying Raster Data" href="qgis_raster_rectify.html" />
+    <link rel="prev" title="6. QGIS Plugins" href="qgis_plugins.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GIS Training for Southern Luzon Landscape using Free and Open Source Software
+              <img src="_static/CI_Logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About this document</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="intro_qgis_course.html">Basic GIS with Quantum GIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_install.html">1. QGIS Installation for MS Windows, MacOS and Ubuntu Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_datasets.html">2. Sample Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_interface.html">3. The QGIS Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_attributes.html">4. Managing Data Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_table_join_and_relate.html">5. Table Join and Relate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_plugins.html">6. QGIS Plugins</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7. Creating Vector Layers (Digitizing)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-project">7.1. Creating a new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-raster-data">7.2. Loading raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-vector-data">7.3. Loading Vector data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-vector-layer">7.4. Creating a new vector layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-options-for-digitizing">7.5. Setting options for digitizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitizing-vectors">7.6. Digitizing vectors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#additional-youtube-video">7.6.1. Additional Youtube Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_raster_rectify.html">8. Rectifying Raster Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_map_composer.html">9. Map Design with Layout Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_install.html">1. QGIS Installation for MS Windows, Mac OSX and Ubuntu Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample_datasets.html">2. Sample Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_interface.html">3. The QGIS Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_attributes.html">4. Managing Data Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_table_join_and_relate.html">5. Table Join and Relate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_plugins.html">6. QGIS Plugins</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Creating Vector Layers (Digitizing)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-new-project">7.1. Creating a new project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-raster-data">7.2. Loading raster data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-vector-data">7.3. Loading Vector data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-new-vector-layer">7.4. Creating a new vector layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-options-for-digitizing">7.5. Setting options for digitizing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#digitizing-vectors">7.6. Digitizing vectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#additional-youtube-video">7.6.1. Additional Youtube Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_raster_rectify.html">8. Rectifying Raster Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis_map_composer.html">9. Map Design with Layout Manager</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GIS Training for Southern Luzon Landscape using Free and Open Source Software</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="intro_qgis_course.html">Basic GIS using QGIS</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Creating Vector Layers (Digitizing)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/qgis_digitizing_sc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-vector-layers-digitizing">
+<h1><span class="section-number">7. </span>Creating Vector Layers (Digitizing)<a class="headerlink" href="#creating-vector-layers-digitizing" title="Link to this heading"></a></h1>
+<p>QGIS provides easy-to-use yet very powerful digitizing tools. Digitizing or digitization is a process of encoding map coordinates and attributes in digital form. QGIS allows you to create and edit vector data using various data sources such as text files, paper maps, or satellite imagery. This exercise will guide you through the basic interface of vector digitizing using QGIS.</p>
+<section id="creating-a-new-project">
+<h2><span class="section-number">7.1. </span>Creating a new project<a class="headerlink" href="#creating-a-new-project" title="Link to this heading"></a></h2>
+<p>1. Open QGIS and create a new project. In the menu, select <span class="menuselection">Project</span>
+–&gt; <a class="reference internal" href="_images/mActionFileNew.svg"><img alt="mActionFileNew" src="_images/mActionFileNew.svg" style="width: 30pt;" /></a> <span class="guilabel">New</span>.</p>
+<p>2. Open <cite>Properties</cite> –&gt; <span class="guilabel">Project Properties</span> and click the <span class="guilabel">Coordinate Reference System (CRS)</span> tab.
+Set the following options.</p>
+<ul class="simple">
+<li><p>In the Coordinate Reference System, choose
+<span class="guilabel">Geographic Coordinate Systems –&gt; WGS 84/Pseudo Mercator</span>.</p></li>
+</ul>
+</section>
+<section id="loading-raster-data">
+<h2><span class="section-number">7.2. </span><span class="target" id="index-0"></span>Loading raster data<a class="headerlink" href="#loading-raster-data" title="Link to this heading"></a></h2>
+<p>1. To load raster data, select <span class="menuselection">Layer</span> –&gt;  <cite>Add Layer</cite> –&gt; <a class="reference internal" href="_images/mActionAddRasterLayer.svg"><img alt="mActionAddRasterLayer" src="_images/mActionAddRasterLayer.svg" style="width: 30pt;" /></a> <span class="guilabel">Add Raster Layer</span>. A prompt may appear asking for the <cite>Coordinate Reference System</cite>.
+Select <cite>Projected Coordinate Systems –&gt; WGS 84/Pseudo Mercator</cite>.
+(The raster to be opened was saved from <strong>QuickMapServices Google Satellite</strong>, so its original projection must be used to avoid layer misalignment in the map canvas.)</p>
+<a class="reference internal image-reference" href="_images/add_raster.png"><img alt="_images/add_raster.png" class="align-center" src="_images/add_raster.png" style="width: 1000pt;" />
+</a>
+<a class="reference internal image-reference" href="_images/add_raster_crs.png"><img alt="_images/add_raster_crs.png" class="align-center" src="_images/add_raster_crs.png" style="width: 1000pt;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>Open the <cite>Raster</cite> data file directory and  <code class="docutils literal notranslate"><span class="pre">Valderrama_town-proper.jpg</span></code>. After setting the raster’s coordinate reference system, right click and click <a class="reference internal" href="_images/mActionZoomToLayer.svg"><img alt="mActionZoomToLayer" src="_images/mActionZoomToLayer.svg" style="width: 30pt;" /></a> as the raster might disappear from the map canvas.</p></li>
+</ol>
+<p>Explore other raster setting using the <span class="guilabel">Raster Layer Properties</span> window.</p>
+<a class="reference internal image-reference" href="images/Valderrama_town-proper.jpg"><img alt="images/Valderrama_town-proper.jpg" class="align-center" src="images/Valderrama_town-proper.jpg" style="width: 1000pt;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <a class="reference internal" href="glossary.html#term-Raster"><span class="xref std std-term">Raster</span></a> dataset is composed of rows (running across) and columns
+(running down) of <a class="reference internal" href="glossary.html#term-Pixel"><span class="xref std std-term">Pixel</span></a> (also known as cells or grids). Each pixel represents a
+geographical region, and the value in that pixel represents some characteristics
+of that region.</p>
+<p>Images with a pixel size covering a small area are called ‘high resolution’
+images because it is possible to make out a high degree of detail in the image.
+Images with a pixel size covering a large area are called ‘low resolution’
+images because the amount of detail the images show is low.</p>
+<p>Some raster data have two files included.  For example, a file with the <cite>jpg</cite>
+extension is the image and the file with the extension <cite>jgw</cite> is the world file.
+World files describe the location, scale and rotation of the map. By adding a
+world file in any image, GIS applications can read and georeference almost any
+image. However, the world file does not give the proper coordinate reference
+system of the raster. More information
+<a class="reference external" href="http://en.wikipedia.org/wiki/World_file">here</a>. In QGIS, you have to
+properly set the CRS for raster with world file.</p>
+</div>
+</section>
+<section id="loading-vector-data">
+<h2><span class="section-number">7.3. </span>Loading Vector data<a class="headerlink" href="#loading-vector-data" title="Link to this heading"></a></h2>
+<p>1. Open the following
+vectors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brgys</span><span class="o">.</span><span class="n">shp</span>
+<span class="n">roads</span><span class="o">.</span><span class="n">shp</span>
+</pre></div>
+</div>
+<p>2. Re-order all the layers and create a suitable symbology
+and color scheme based on the image below. Don’t forget to right click and Zoom to Layer</p>
+<a class="reference internal image-reference" href="_images/digitizing_ordered_layers.png"><img alt="_images/digitizing_ordered_layers.png" class="align-center" src="_images/digitizing_ordered_layers.png" style="width: 1000pt;" />
+</a>
+<p>We will use the <code class="docutils literal notranslate"><span class="pre">Valderrama_town-proper.jpg</span></code> raster as our primary source for a structures_digitized layer
+that will include features such as Brooke’s Pt.’s municipal hall, town gymnasium and</p>
+</section>
+<section id="creating-a-new-vector-layer">
+<h2><span class="section-number">7.4. </span><span class="target" id="index-1"></span>Creating a new vector layer<a class="headerlink" href="#creating-a-new-vector-layer" title="Link to this heading"></a></h2>
+<p>We will now create a new vector layer, to digitize structures_digitized. We will use a polygon
+layer to represent this data.</p>
+<p>1. To create a new vector layer select <span class="menuselection">Layer</span> –&gt;
+<span class="guilabel">Create Layer</span> –&gt; <a class="reference internal" href="_images/mActionNewVectorLayer.svg"><img alt="mActionNewVectorLayer" src="_images/mActionNewVectorLayer.svg" style="width: 30pt;" /></a>
+<span class="guilabel">New Shapefile Layer</span>.</p>
+<p>2. In the <span class="guilabel">Geometry type</span> option,
+choose <span class="guilabel">Polygon</span>.</p>
+<p>3. In the <span class="guilabel">Specify CRS</span>, select
+<span class="guilabel">EPSG 4326 - WGS 84</span>.</p>
+<p>4. In the <span class="guilabel">New Field</span>, add <code class="docutils literal notranslate"><span class="pre">name</span></code> in the <span class="guilabel">Name</span> field
+and choose <span class="guilabel">Text Data</span> as the data type. Then, click
+<span class="guilabel">Add to Attributes List</span>.  The newly added attribute field is
+added in the list.</p>
+<p>5. Add another attribute column. In the <span class="guilabel">New Field</span>, add <code class="docutils literal notranslate"><span class="pre">type</span></code> in
+the <span class="guilabel">Name</span> field and choose <span class="guilabel">Text Data</span> as the data type. Then,
+click <span class="guilabel">Add to Fields List</span>.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute field, we will encode the name of the feature. In the
+<code class="docutils literal notranslate"><span class="pre">type</span></code> attribute field we encode the type of structure (stadium, building, mall).
+Click <span class="guilabel">OK</span>.</p>
+<a class="reference internal image-reference" href="_images/new_vector_layer.png"><img alt="_images/new_vector_layer.png" class="align-center" src="_images/new_vector_layer.png" style="width: 1000pt;" />
+</a>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Limit field names to a maximum of 10 characters and avoid special characters
+(such as <code class="docutils literal notranslate"><span class="pre">&amp;,</span> <span class="pre">#,</span> <span class="pre">&#64;</span> <span class="pre">{</span></code> ) and spaces.</p>
+</div>
+<p>6. Click the <img alt="button" src="_images/button_ellipsis.png" /> symbol. A new window will appear for the file name and location of the data within your
+directory. Use the file name, <code class="docutils literal notranslate"><span class="pre">structures_digitized.shp</span></code>. Click <cite>Save</cite>.</p>
+<a class="reference internal image-reference" href="_images/new_vector_filename.png"><img alt="_images/new_vector_filename.png" class="align-center" src="_images/new_vector_filename.png" style="width: 10000pt;" />
+</a>
+<p>In the <a class="reference internal" href="_images/mActionNewVectorLayer.svg"><img alt="mActionNewVectorLayer" src="_images/mActionNewVectorLayer.svg" style="width: 30pt;" /></a> <span class="guilabel">New Shapefile Layer</span> window, Click <span class="guilabel">OK</span>.  You now have a blank <strong>structures_digitized</strong> layer.</p>
+<p>You can create different point, and polygon layers by selecting <span class="guilabel">Point</span> or <span class="guilabel">Polygon</span> at the <span class="guilabel">New Shapefile Layer</span> window.</p>
+</section>
+<section id="setting-options-for-digitizing">
+<h2><span class="section-number">7.5. </span><span class="target" id="index-2"></span>Setting options for digitizing<a class="headerlink" href="#setting-options-for-digitizing" title="Link to this heading"></a></h2>
+<p>Before we can begin digitizing, we must set the snapping tolerance to a value that
+allows us an optimal editing of the vector layer geometries.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Snapping tolerance is the distance QGIS uses to search for the closest vertex
+and/or segment you are trying to connect when you set a new vertex or move an
+existing vertex. If you aren’t within the snap tolerance, QGIS will leave the
+vertex where you release the mouse button, instead of snapping it to an existing
+vertex and/or segment.</p>
+</div>
+<p>1. To set the snapping tolerance, select <span class="guilabel">Settings</span> –&gt; <a class="reference internal" href="_images/mActionOptions.svg"><img alt="Options" src="_images/mActionOptions.svg" style="width: 30pt;" /></a> <span class="guilabel">Options</span>. Under <span class="guilabel">Map Tools</span>, go to <span class="guilabel">Digitizing</span> and select <span class="guilabel">Snapping options</span>. Within the <span class="guilabel">Snapping options</span> window,
+activate the <span class="guilabel">Enable snapping by default</span> and <span class="guilabel">Show snapping tooltips</span> by ticking the box.</p>
+<p>2. In the Snapping Option window,
+select the following settings:</p>
+<a class="reference internal image-reference" href="_images/snapping_options.png"><img alt="_images/snapping_options.png" class="align-center" src="_images/snapping_options.png" style="width: 1000pt;" />
+</a>
+<p>When you start editing the <strong>structures_digitized</strong> layer, new vertices will snap if it is within
+10 pixels of another vertex.</p>
+<p>3. Save your
+project.</p>
+</section>
+<section id="digitizing-vectors">
+<h2><span class="section-number">7.6. </span><span class="target" id="index-3"></span>Digitizing vectors<a class="headerlink" href="#digitizing-vectors" title="Link to this heading"></a></h2>
+<p>We will now start digitizing <strong>structures_digitized</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This process is called heads-up or <span class="target" id="index-4"></span>on-screen digitizing. This is an
+interactive process, in which a map is created using a previously digitized or
+scanned information. It is called “heads-up” digitizing because the attention
+of the user is focused on the screen.</p>
+</div>
+<p>1. Hide all layers except the <code class="docutils literal notranslate"><span class="pre">structures_digitized</span></code> and <code class="docutils literal notranslate"><span class="pre">Valderrama_town-proper</span></code> layer. Click the checkmark preceding the name of the layer in the <span class="guilabel">Map Legend</span>
+view to hide/show layers.</p>
+<ol class="arabic simple" start="2">
+<li><p>Zoom-in to an area, where the Valderrama Municipal Hall is located.</p></li>
+</ol>
+<p>3. Select the <code class="docutils literal notranslate"><span class="pre">structures_digitized</span></code> layer, right-click and select <a class="reference internal" href="_images/mActionToggleEditing.svg"><img alt="mActionToggleEditing" src="_images/mActionToggleEditing.svg" style="width: 30pt;" /></a>
+<span class="guilabel">Toggle Editing</span>.  Once the layer is in edit mode, additional tool
+buttons on the editing toolbar previously greyed-out will become available.</p>
+<a class="reference internal image-reference" href="_images/toggle_editing__annot.png"><img alt="_images/toggle_editing__annot.png" class="align-center" src="_images/toggle_editing__annot.png" style="width: 1000pt;" />
+</a>
+<p>For each feature, you first digitize the geometry,
+then encode the attributes.</p>
+<p>4. To digitize the geometry, click the <a class="reference internal" href="_images/mActionCapturePolygon.svg"><img alt="mActionCapturePolygon" src="_images/mActionCapturePolygon.svg" style="width: 30pt;" /></a> <span class="guilabel">Add Polygon Feature</span>,
+left-click on the map area to create the first point/vertex of your new feature.</p>
+<a class="reference internal image-reference" href="_images/editing_session_annot.png"><img alt="_images/editing_session_annot.png" class="align-center" src="_images/editing_session_annot.png" style="width: 1000pt;" />
+</a>
+<p>For points and lines, keep on left-clicking for each additional vertex you wish
+to capture. When you have finished adding vertices, right-click anywhere on the
+<span class="guilabel">Map view</span> to confirm you have finished entering the geometry of that
+feature.</p>
+<p>The attribute window will appear, allowing you to enter the information for the
+new feature. Add the type of structure in the <code class="docutils literal notranslate"><span class="pre">type</span></code> field and the name of the
+feature in the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p>
+<a class="reference internal image-reference" href="_images/add_attributes.png"><img alt="_images/add_attributes.png" class="align-center" src="_images/add_attributes.png" style="width: 1000pt;" />
+</a>
+<p>To save your editing session, <a class="reference internal" href="_images/mActionToggleEditing.svg"><img alt="mActionToggleEditing" src="_images/mActionToggleEditing.svg" style="width: 30pt;" /></a> <span class="guilabel">Toggle Editing</span>
+and click <a class="reference internal" href="_images/mActionFileSave.svg"><img alt="mActionFileSave" src="_images/mActionFileSave.svg" style="width: 30pt;" /></a> <span class="guilabel">Save</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In some cases, you will reach the edge of the <span class="guilabel">Map View</span> but you
+would like to continue adding new vertices.  When this happens, use the arrow
+keys or press the spacebar while using your mouse to pan across the
+<span class="guilabel">Map View</span>.</p>
+</div>
+<p><strong>The Node Tool</strong></p>
+<p>The <a class="reference internal" href="_images/mActionVertexTool.svg"><img alt="tool" src="_images/mActionVertexTool.svg" style="width: 30pt;" /></a> <span class="guilabel">Node Tool</span> provides manipulation capabilities of
+feature vertices similar to CAD programs. It is possible to simply select multiple
+vertices at once and to move, add or delete them all together. It supports the topological editing
+feature. This tool is, unlike other tools in QGIS, persistent, so when some
+operation is done, selection stays active for this feature and tool.</p>
+<p><strong>Basic operations</strong></p>
+<p>Start by activating the <a class="reference internal" href="_images/mActionVertexTool.svg"><img alt="tool" src="_images/mActionVertexTool.svg" style="width: 30pt;" /></a> <cite>Node Tool</cite> and selecting some features by clicking on it.
+Red circles appear at each vertex of this feature. Functionalities are:</p>
+<ul class="simple">
+<li><p><strong>Selecting vertex</strong>: Selecting is easy: just click on vertex and it will become enlarged. Vertices
+can be selected at once when clicking somewhere outside the feature and opening a
+rectangle where all vertices inside will be selected. When selecting more vertices, the
+<span class="guilabel">Shift</span> key can be used to select more vertices. On the contrary, <cite>Ctrl</cite> key
+can  used to invert selection of vertices.</p></li>
+<li><p><strong>Adding vertex</strong>: Just double click near some edge and a new vertex will appear
+on the edge near the cursor. Click for the third time to move it.</p></li>
+<li><p><strong>Deleting vertex</strong>: After selecting vertices for deletion, click the
+<span class="guilabel">Delete</span> on your keyboard.</p></li>
+</ul>
+<p>For more information on the basic operations visit this <a class="reference external" href="https://gis.stackexchange.com/questions/278217/how-does-the-qgis3-vertex-editor-work">site</a>.</p>
+<p>The rest of the basic editing tools are explained below:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="_images/mActionToggleEditing.svg"><img alt="mActionToggleEditing" src="_images/mActionToggleEditing.svg" style="width: 30pt;" /></a> <span class="guilabel">Toggle editing</span> - Enable editing of the
+selected vector layer.</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">|saveedit|</span></a> <span class="guilabel">Save edits</span> - save your editing session in the
+currently selected layer.  This is different from Saving your project.</p></li>
+<li><p><a class="reference internal" href="_images/mActionCapturePoint.svg"><img alt="mActionCapturePoint" src="_images/mActionCapturePoint.svg" style="width: 30pt;" /></a> <span class="guilabel">Capture Point</span> - add point features.</p></li>
+<li><p><a class="reference internal" href="_images/mActionCaptureLine.svg"><img alt="mActionCaptureLine" src="_images/mActionCaptureLine.svg" style="width: 30pt;" /></a> <span class="guilabel">Capture Line</span> - add line features.</p></li>
+<li><p><a class="reference internal" href="_images/mActionCapturePolygon.svg"><img alt="mActionCapturePolygon" src="_images/mActionCapturePolygon.svg" style="width: 30pt;" /></a> <span class="guilabel">Capture Polygon</span> - add polygon features.</p></li>
+<li><p><a class="reference internal" href="_images/mActionMoveFeature.svg"><img alt="mActionMoveFeature" src="_images/mActionMoveFeature.svg" style="width: 30pt;" /></a> <span class="guilabel">Move Feature</span> - move location of a selected
+feature.</p></li>
+<li><p><a class="reference internal" href="_images/mActionVertexTool.svg"><img alt="tool" src="_images/mActionVertexTool.svg" style="width: 30pt;" /></a> <span class="guilabel">Vertex Tool</span> - activate Node tool functions.</p></li>
+<li><p><a class="reference internal" href="_images/mActionDeleteSelected.svg"><img alt="mActionDeleteSelected" src="_images/mActionDeleteSelected.svg" style="width: 30pt;" /></a> <span class="guilabel">Delete Selected</span> - delete selected one or
+more features.</p></li>
+<li><p><a class="reference internal" href="_images/mActionEditCut.svg"><img alt="mActionEditCut" src="_images/mActionEditCut.svg" style="width: 30pt;" /></a> <span class="guilabel">Cut Features</span> - delete a selected feature(s) from
+the existing layer and place it on a “spatial clipboard”.</p></li>
+<li><p><a class="reference internal" href="_images/mActionEditCopy.svg"><img alt="mActionEditCopy" src="_images/mActionEditCopy.svg" style="width: 30pt;" /></a> <span class="guilabel">Copy Features</span> - place selected feature(s) into
+the “spatial clipboard”.</p></li>
+<li><p><a class="reference internal" href="_images/mActionEditPaste.svg"><img alt="mActionEditPaste" src="_images/mActionEditPaste.svg" style="width: 30pt;" /></a> <span class="guilabel">Paste Features</span> - paste feature(s) from the
+“spatial clipboard” to the currently selected and editable layer.</p></li>
+</ul>
+<p>Full description of the editing tools and other advanced features available in the
+<a class="reference external" href="https://docs.qgis.org/testing/pdf/en/QGIS-testing-UserGuide-en.pdf">QGIS User’s Manual</a>.</p>
+<p>5. Finish editing the
+structures_digitized layer.</p>
+<p>6. Save your
+project.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to toggle <a class="reference internal" href="_images/mActionToggleEditing.svg"><img alt="mActionToggleEditing" src="_images/mActionToggleEditing.svg" style="width: 30pt;" /></a> <span class="guilabel">Toggle Editing</span> off
+regularly. This allows you to save your recent changes, and also confirms that
+your data source can accept all your changes.</p>
+</div>
+<section id="additional-youtube-video">
+<h3><span class="section-number">7.6.1. </span>Additional Youtube Video<a class="headerlink" href="#additional-youtube-video" title="Link to this heading"></a></h3>
+<p>For the offline version of this video click this <a class="reference external" href="videos/Creating_Vector_Layers.mp4">link</a>.</p>
+<div style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/QKQOKw2qzIY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qgis_plugins.html" class="btn btn-neutral float-left" title="6. QGIS Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qgis_raster_rectify.html" class="btn btn-neutral float-right" title="8. Rectifying Raster Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, https://conservation.org license under GNU Free Document License.
+      <span class="lastupdated">Last updated on Jun 16, 2026.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
