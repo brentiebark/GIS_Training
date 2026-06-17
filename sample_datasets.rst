@@ -14,7 +14,7 @@ This is downloaded from `NAMRIA <https://www.namria.gov.ph/Downloads/topoMap250/
 Sample Datasets for Valderrama, Antique
 ---------------------------------------
 
-* Sample datasets of Valderrama, Antique province: `sample datasets <data/>`_
+* Sample datasets of Valderrama, Antique province: `sample datasets <data//>`_
 The datasets are stored on specific folders based on type. The vector, raster, styles and table data are stored separately by folder. Just click the link above and you will be prompted to download the **sample_datasets.zip** file.
 
 Data Disclaimer
