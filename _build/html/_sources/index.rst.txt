@@ -34,11 +34,12 @@ About CI
 --------
 
 <<<<<<< HEAD
+Since 1995, Conservation International Philippines Foundatigit push ori
 =======
 
->>>>>>> c7cbba19bc54a7e785ef5afb28df213238f7407e
 Since 1995, Conservation International Philippines Foundation, Inc. (CIPFI) has been working with indigenous communities, government agencies to promote solutions to major environmental issues such as deforestation, climate change, illegal wildlife trade, as well as destructive fishing practices.
 
+>>>>>>> c7cbba19bc54a7e785ef5afb28df213238f7407e
 In 2015, Conservation International was registered as a non-stock and non-profit corporation with the Securities and Exchange Commission (SEC). Currently, there are approximately 60 staff members working in various locations in the Philippines, from forests and watersheds in Mount Mantalingahan in Palawan, as well as in the Verde Island Passage and various cities throughout the country. CI has offices in Quezon City, Puerto Princesa, and Brooke’s Point.
 
 
