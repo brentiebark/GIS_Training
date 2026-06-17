@@ -56,7 +56,7 @@ Copyright © 2026 Conservation International Philippines
 
 Permission is granted to copy, distribute and/or modify this document under
 the terms of the GNU Free Documentation License, Version 1.3 or any later
-version published by the Free Software Foundation; with no Invariant Sections,
+version published by the `Free Software Foundation <https://www.gnu.org/licenses/fdl-1.3.html#license-text>`_;  with no Invariant Sections,
 no Front-Cover Texts, and no Back-Cover Texts.
 
-A copy of the license is included in the section entitled "Document License".
+A copy of the license is included in the last section entitled "Document License".

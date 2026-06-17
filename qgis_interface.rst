@@ -25,7 +25,7 @@ This exercise will explore the basic interface of QGIS. You will create your fir
 
 
 Creating a new project
-----------------------------------
+----------------------
 
 1. Launch QGIS by clicking :guilabel:`Start Menu` button, click the :menuselection:`QGIS 3.4 folder --> QGIS Desktop 3.4`.
 
@@ -41,7 +41,7 @@ Creating a new project
    :width: 1000 pt
 
 
-**Here are the commonly used tabs of the Project Properties:** 
+**Here are the commonly used tabs of the Project Properties:**
 
 
 * In the *General Settings* tab you can define the project file, home, title, selection
@@ -72,9 +72,7 @@ Creating a new project
 
 Opening Vector data
 -------------------------------
-1. Add vector layers. In the :guilabel:`Menu`, select  :guilabel:`Layer` --> |mActionAddOgrLayer| :guilabel:`Add Vector Layer`. The `Data Source Manager` window will appear. 
-
-.. |mActionAddOgrLayer| image:: images/qgis_icons/mActionAddOgrLayer.png
+1. Add vector layers. In the :guilabel:`Menu`, select  :guilabel:`Layer` --> |mActionAddOgrLayer| :guilabel:`Add Vector Layer`. The `Data Source Manager` window will appear.
 
 .. image:: images/add_vector_layer.png
    :align: center
@@ -95,7 +93,7 @@ keyboard while selecting files. Select only the following files::
 .. |button| image:: images/button_ellipsis.png
 
 .. tip:: You can sort out the file types by clicking the column `Type` from the window.
-   
+
 
 .. image:: images/add_vector_layer_select.png
    :align: center
@@ -149,8 +147,6 @@ Saving your project
 
       myfirstqgisproject.qgs
 
-.. |mActionFileSave| image:: images/qgis_icons/mActionFileSave.png
-
 
 2. Click *Save*. You have saved your first QGIS project.
 
@@ -203,18 +199,6 @@ the zoom and pan functions. Each tool is explained below:
 ||mActionDraw|          |*Refresh*          |Redraw all data layers       |
 +-----------------------+-------------------+-----------------------------+
 
-.. |mActionPan| image:: images/qgis_icons/mActionPan.png
-.. |mActionZoomIn| image:: images/qgis_icons/mActionZoomIn.png
-.. |mActionZoomOut| image:: images/qgis_icons/mActionZoomOut.png
-.. |mActionZoomFullExtent| image:: images/qgis_icons/mActionZoomFullExtent.png
-.. |mActionZoomToLayer| image:: images/qgis_icons/mActionZoomToLayer.png
-.. |mActionZoomToSelected| image:: images/qgis_icons/mActionZoomToSelected.png
-.. |mActionZoomLast| image:: images/qgis_icons/mActionZoomLast.png
-.. |mActionDraw| image:: images/qgis_icons/mActionDraw.png
-
-
-
-
 **Zooming and panning with the mouse wheel.** Press the mouse wheel
 to pan inside of the main window and you can roll the mouse wheel to zoom in
 and out. For zooming, place the mouse cursor inside the map area and
@@ -262,7 +246,7 @@ Click the drop-down interface and select *Single Symbol*, which is the default.
    :width: 1000 pt
 
 
-3. Click the color bar of *Color* dropdown button to see the **standard** colors (if there are any), 
+3. Click the color bar of *Color* dropdown button to see the **standard** colors (if there are any),
 then click the appropriate *blue* color that is suited for waterways layer.
 
 .. image:: images/select_color_preset.png
@@ -330,14 +314,14 @@ For this exercise, we will use a pre-defined style available in the *data/styles
 
 1. Select the *roads* layer and right-click *Properties*.
 
-2. Within the *Style* tab of the *roads* layer, click *Load Style*. 
-Click the the box with three dot line and open your `Styles` directory 
+2. Within the *Style* tab of the *roads* layer, click *Load Style*.
+Click the the box with three dot line and open your `Styles` directory
 and select *roads_style.qml*. Click *Open* to select the style.
 
 .. image:: images/load_style.png
    :align: center
    :width: 1000 pt
-   
+
 .. image:: images/select_custom_style_3dots.png
    :align: center
    :width: 600 pt
@@ -346,7 +330,7 @@ and select *roads_style.qml*. Click *Open* to select the style.
    :align: center
    :width: 1000 pt
 
-3. Click the *Style* on the left pane to see the rule-based style from *roads_style.qml* 
+3. Click the *Style* on the left pane to see the rule-based style from *roads_style.qml*
 according to different road types. This custom style also uses the scale-dependent rendering.
 Click *OK*.
 
@@ -362,9 +346,9 @@ Click *OK*.
    to appear only on larger scales over the other road types.
 
 
-4. Zoom in and out of the *Map view* to see the scale-dependent rendering in action. 
-   If all the white roads are visible (with single yellow road) in smaller scale, 
-   then our map will be mostly covered with   
+4. Zoom in and out of the *Map view* to see the scale-dependent rendering in action.
+   If all the white roads are visible (with single yellow road) in smaller scale,
+   then our map will be mostly covered with
    roads.
 
 .. image:: images/roads_style_view.png
@@ -466,15 +450,11 @@ This video uses an older version of QGIS, nonetheless the basic interface and la
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-        <iframe src="https://www.youtube-nocookie.com/embed/vs8KeFdfhy4" 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        <iframe src="https://www.youtube-nocookie.com/embed/vs8KeFdfhy4"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
         </iframe>
-    </div>   
-
-.. raw:: latex
-
-   \pagebreak[4]
+    </div>

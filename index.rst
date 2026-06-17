@@ -1,5 +1,5 @@
-.. sphinx_essc_geo documentation master file, created by
-   sphinx-quickstart on Tue May 15, 2020.
+.. CIPFI documentation master file, created by
+   sphinx on Tue June 17, 2026.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -28,6 +28,9 @@ Contents
    Creating Vector Layers (Digitizing) <qgis_digitizing_sc.rst>
    Rectifying Raster Data <qgis_raster_rectify.rst>
    Map Design with Layout Manager <qgis_map_composer.rst>
+   Glossary <glossary.rst>
+   Document License <gfdl.rst>
+
 
 About CI
 --------

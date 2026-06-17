@@ -38,12 +38,12 @@ Creating a new project
 Loading QuickMapServices and Enabling the GDAL Georeferencer
 ------------------------------------------------------------
 
-1. Go to :menuselection:`Web --> QuickMapServices` |quickmapservicesdownload| :menuselection:`OpenStreetMap --> OSM Standard`. Zoom in to Panay Island. 
+1. Go to :menuselection:`Web --> QuickMapServices` |quickmapservicesdownload| :menuselection:`OpenStreetMap --> OSM Standard`. Zoom in to Panay Island.
 
 .. image:: images/load_roads_raster.png
    :align: center
    :width: 1000 pt
-   
+
 .. image:: images/Panay_zoom.png
    :align: center
    :width: 1000 pt
@@ -72,7 +72,7 @@ window click |mActionAddRasterLayer| :guilabel:`Open Raster` to add your unrecti
 .. image:: images/raster_georeferencer.png
    :align: center
    :width: 1000 pt
-   
+
 
 2. A new window will appear, then go to your `Raster` data directory.
 Select the ``2523-Roxas.jpg`` image, click :guilabel:`Open`.
@@ -89,16 +89,17 @@ We will be rectifying a the upper part the portion on Antique as shown on the un
    :align: center
    :width: 1000 pt
 
-The raster will show up in the main working area of the dialog. 
-Place the georeferencer side-by-side with the main map canvas displaying OpenStreetMap and adjust to similar zoom levels. 
+The raster will show up in the main working area of the dialog.
+Place the georeferencer side-by-side with the main map canvas displaying OpenStreetMap and adjust to similar zoom levels.
 Once this is ok, we can start to enter reference points.
 
 .. image:: images/georef_loaded_map.png
    :align: center
    :width: 1000 pt
 
-.. tip:: 
-Loading the OpenStreetMap as base layer from the |quickmapservicesdownload| :guilabel:`QuickMapServices` --> |OSM| :guilabel:`OSM` --> :guilabel:`OSM Standard` helps in pinpointing the features as basis for georeferencing the unrectified Panay topo map. Disabling the GCP table from the Georeferencer Window :guilabel:`View` --> :guilabel:`Panels` --> :guilabel:`GCP table` may help in adjusting the view for the georeferencer window and QGIS :guilabel:`Map View/Canvas`. You can also adjust ``Browser`` and ``Layers`` panel to make the Map View/Canvas a bit bigger. 
+.. tip::
+
+Loading the OpenStreetMap as base layer from the |quickmapservicesdownload| :guilabel:`QuickMapServices` --> |OSM| :guilabel:`OSM` --> :guilabel:`OSM Standard` helps in pinpointing the features as basis for georeferencing the unrectified Panay topo map. Disabling the GCP table from the Georeferencer Window :guilabel:`View` --> :guilabel:`Panels` --> :guilabel:`GCP table` may help in adjusting the view for the georeferencer window and QGIS :guilabel:`Map View/Canvas`. You can also adjust ``Browser`` and ``Layers`` panel to make the Map View/Canvas a bit bigger.
 
 
 Add control points
@@ -175,7 +176,7 @@ data, number of GCPs and the ultimate objective of the exercise.
 
 * Output Raster - the file name and type of the raster.
 
-* Target SRS - target spatial reference system or coordinate reference system. 
+* Target SRS - target spatial reference system or coordinate reference system.
 
 1.  To define the transformation settings, clic :guilabel:`Transformation Settings` icon.
     In the :guilabel:`Transformation setting` window, select the following options::
@@ -202,9 +203,8 @@ Starting the georeferencing
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 1. After all GCPs have been collected and all transformation settings are
-defined, just press the button |Start| :guilabel:`Start georeferencing` (the third icon in georeferencer window, green triangle)to create the new georeferenced raster.
-
-.. |Start| image:: images/qgis_icons/mActionStart.png
+defined, just press the button |mActionStart| :guilabel:`Start georeferencing`
+(the third icon in georeferencer window, green triangle)to create the new georeferenced raster.
 
 2. The georeferenced image should be loaded into your map canvass.  If the
 output raster is misaligned, you can adjust the GCPs and repeat the process.
@@ -219,15 +219,10 @@ Additional Youtube Video
 
 For the offline version of this video please click this `link <videos/Rectifying_Raster_Data.mp4>`_.
 
-In this video a raster was used as a reference image instead of a vector. Like what we have above, an unrectified topographic map was used. 
+In this video a raster was used as a reference image instead of a vector. Like what we have above, an unrectified topographic map was used.
 
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://www.youtube.com/embed/XV62QEk0Cxg" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
-
-
-.. raw:: latex
-
-   \pagebreak[4]

@@ -31,10 +31,10 @@ succinctly by `Krygier and Wood's Making Maps <https://www.researchgate.net/publ
 * **2 - Legend** - this is the key to interpreting the map. If it fails, your
   goals for the map will fail. However, don't insult your map's readers by
   including obvious symbols in the legend.
-  
-* **3 - Inset** - this map element enables the audience to locate the main map into larger geographical context. 
+
+* **3 - Inset** - this map element enables the audience to locate the main map into larger geographical context.
   Two insets are needed if we want to relate the area of interest to larger region like country.
-  
+
 * **4 - Directional indicator** - only needed if: 1) the map is not oriented to
   the north; 2) the map is of an area unfamiliar to your intended audience.
   Directional indicators can often be left off the map. If included, avoid large
@@ -85,8 +85,8 @@ components of the map composer are explained below:
 * **2 - Map Canvas** - where the user your map and map elements are located.
 
 * **3 - Right Pane Menu**
-	
-	* **Items** - This is where the layers from QGIS interface and other map elements are arranged. Like in ``Layers`` pane in QGIS interface, the topmost item could be moved to bottom, thus showing the other items above it. 
+
+	* **Items** - This is where the layers from QGIS interface and other map elements are arranged. Like in ``Layers`` pane in QGIS interface, the topmost item could be moved to bottom, thus showing the other items above it.
 	* **Undo History** - Shows the history of the most recent commands/actions done in the ``Layout``.
 	* **Layout** - Shows export settings and reference map.
 	* **Item Properties** - This is hidden by default. Enable it by right clicking on the map canvas and selecting `Item properties`.
@@ -95,7 +95,7 @@ components of the map composer are explained below:
 Map Composition
 ---------------
 
-To setup the ``Layout`` map canvas, right click on the canvas and click :guilabel:`Page Properties`. If you want to add another page on the canvas, click `Layout` --> |addPage| :guilabel:`Add Pages`.  
+To setup the ``Layout`` map canvas, right click on the canvas and click :guilabel:`Page Properties`. If you want to add another page on the canvas, click `Layout` --> |addPage| :guilabel:`Add Pages`.
 
 .. |addPage| image:: images/qgis_icons/mActionNewPage.svg
 
@@ -111,7 +111,7 @@ You can setup the map canvas size and orientation as needed.
 
 1. To add the map canvas, click the |mActionAddMap| :guilabel:`Add New Map`.
 from QGIS Map Canvas and drag a rectangle on the map canvas with the left mouse
-button to add the map. The size for the map canvas can be adjusted just be clicking the canvas' corner points. 
+button to add the map. The size for the map canvas can be adjusted just be clicking the canvas' corner points.
 
 .. image:: images/add_new_map_composer.png
    :align: center
@@ -120,19 +120,16 @@ button to add the map. The size for the map canvas can be adjusted just be click
 
 .. tip::
 
-	Make sure to lock/unlock the layers located right under the `Layers drop down menu` --> `Lock layers, Lock styles for layers`. 
+	Make sure to lock/unlock the layers located right under the `Layers drop down menu` --> `Lock layers, Lock styles for layers`.
 	This will enable the map layout to remain unchange after unticking the layers from the map canvas layout.
 
 
 .. image:: images/map_composer_lock_layers.png
    :align: center
    :width: 350 pt
-	
+
 2. You can adjust the item content of the map by selecting |mActionMoveItemContent| :guilabel:`Move Item Content` and dragging the map content to the desired location.
 
-.. |mActionMoveItemContent| image:: images/qgis_icons/mActionMoveItemContent.png
-
-.. |mActionSelect| image:: images/qgis_icons/mActionSelect.svg
 
 .. image:: images/move_cursor.png
    :align: center
@@ -140,7 +137,7 @@ button to add the map. The size for the map canvas can be adjusted just be click
 
 .. tip::
 
-	It is important to select |mActionSelect| the item itself to adjust the position and size of that selected item. 
+	It is important to select |mActionSelect| the item itself to adjust the position and size of that selected item.
 	Take note of the difference between the select and move item content.
 
 3. To update the display if there are any adjustment done in the QGIS window, you can click :guilabel:`Set to map canvas extent` to adjust the map extent.
@@ -155,47 +152,55 @@ Then click :guilabel:`Update Preview`.
    :align: center
    :width: 250 pt
 
+
 4. To add grid to the map, expand the :guilabel:`Grids` properties and see the following settings in the :guilabel:`Modify Grid` button:
-  Under 
-    :guilabel:`Grid Type` : ``Cross``;
-    :guilabel:`CRS` : ``EPSG:4326``;
-    :guilabel:`Interval units` : ``Map Units``;
-    :guilabel:`Interval` : x: 0.0008, y :0.0008.
-  Under :guilabel:`Grid frame`:
-    :guilabel:`Frame style` : ``Zebra``
-  Under :guilabel:`Draw coordinates`:
-    :guilabel:`Format` : ``Decimal with suffix``;
-    :guilabel:`Left` : ``Vertical ascending``;
-    :guilabel:`Right` : ``Vertical descending``.
-    
+
+    Under:
+
+    - :guilabel:`Grid Type`: ``Cross``
+    - :guilabel:`CRS`: ``EPSG:4326``
+    - :guilabel:`Interval units`: ``Map Units``
+    - :guilabel:`Interval`: x: 0.0008, y: 0.0008
+
+    Under :guilabel:`Grid frame`:
+
+    - :guilabel:`Frame style`: ``Zebra``
+
+    Under :guilabel:`Draw coordinates`:
+
+    - :guilabel:`Format`: ``Decimal with suffix``
+    - :guilabel:`Left`: ``Vertical ascending``
+    - :guilabel:`Right`: ``Vertical descending``
+
+
 .. image:: images/grid_adjustment.png
    :align: center
-   :width: 300 pt 
+   :width: 300 pt
 
 ---
 
 .. image:: images/grid_adjustmentv2.png
    :align: center
-   :width: 300 pt 
+   :width: 300 pt
 
 ---
 
 .. image:: images/zebra.png
    :align: center
-   :width: 300 pt 
-   
+   :width: 300 pt
+
 ---
 
 .. image:: images/grid_adjustmentv3.png
    :align: center
-   :width: 300 pt 
+   :width: 300 pt
 
 5. To add inset, simple add another  click the |mActionAddMap| :guilabel:`Add New Map`. Go to `Overviews` and click the add button and select the Map0. Overview styles can be set accordingly.
 
 .. image:: images/add_inset.png
     :align: center
     :width: 1000 pt
-    
+
 ---
 
 .. image:: images/add_overview_options.png
@@ -241,7 +246,7 @@ Click the |mActionAddLegend| :guilabel:`Add Legend` for the legend.
 
 **Legend Item Tab Properties**
 
-* **General dialog** - you can specify legend title, font and colors, columns 
+* **General dialog** - you can specify legend title, font and colors, columns
   symbol size and spacing.
 
 .. image:: images/legend_general.png
@@ -294,7 +299,7 @@ Under :guilabel:`Units`:
 
   :guilabel:`Label unit multiplier` : 1.000000
 
-  :guilabel:`Label for units` : m 
+  :guilabel:`Label for units` : m
 
 :guilabel:`Scalebar` options allow you to specify segment size, fixed width units, fit segment width, height,
 display options, fonts and colors and, position and size.
