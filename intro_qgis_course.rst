@@ -36,3 +36,5 @@ At the end of the training/workshop, participants should be able to:
    qgis_digitizing_sc.rst
    qgis_raster_rectify.rst
    qgis_map_composer.rst
+   glossary.raster
+   gfdl.rst
