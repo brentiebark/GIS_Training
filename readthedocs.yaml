@@ -11,10 +11,15 @@ build:
   jobs:
     build:
       html:
-        # 1. Create the system-mandated cloud folder structure first
+        # 1. Manually set up the virtual environment provided by Read the Docs
+        - python -m virtualenv $READTHEDOCS_VIRTUALENV_PATH
+        # 2. Upgrade pip and install all requirements
+        - $READTHEDOCS_VIRTUALENV_PATH/bin/pip install --upgrade pip
+        - $READTHEDOCS_VIRTUALENV_PATH/bin/pip install -r requirements.txt
+        # 3. Create the mandatory cloud output directory
         - mkdir -p $READTHEDOCS_OUTPUT/html
-        # 2. Compile directly into the cloud path, explicitly overriding local paths
-        - sphinx-build -b html -d _build/doctrees . $READTHEDOCS_OUTPUT/html
+        # 4. Build the HTML using the virtual environment's Sphinx installation
+        - $READTHEDOCS_VIRTUALENV_PATH/bin/sphinx-build -b html -d _build/doctrees . $READTHEDOCS_OUTPUT/html
 
 python:
   install:
