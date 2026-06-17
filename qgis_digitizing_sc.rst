@@ -27,14 +27,14 @@ Select `Projected Coordinate Systems --> WGS 84/Pseudo Mercator`.
 .. image:: images/add_raster.png
    :align: center
    :width: 1000 pt
-   
+
 .. image:: images/add_raster_crs.png
    :align: center
    :width: 1000 pt
 
-2. Open the `Raster` data file directory and  ``Valderrama_town-proper.jpg``. After setting the raster's coordinate reference system, right click and click |mActionZoomToLayer| as the raster might disappear from the map canvas. 
+2. Open the `Raster` data file directory and  ``Valderrama_town-proper.jpg``. After setting the raster's coordinate reference system, right click and click |mActionZoomToLayer| as the raster might disappear from the map canvas.
 
-Explore other raster setting using the :guilabel:`Raster Layer Properties` window. 
+Explore other raster setting using the :guilabel:`Raster Layer Properties` window.
 
 .. image:: images/Valderrama_town-proper.jpg
    :align: center
@@ -71,14 +71,14 @@ vectors::
       roads.shp
 
 2. Re-order all the layers and create a suitable symbology
-and color scheme based on the image below. Don't forget to right click and Zoom to Layer 
+and color scheme based on the image below. Don't forget to right click and Zoom to Layer
 
 .. image:: images/digitizing_ordered_layers.png
    :align: center
    :width: 1000 pt
 
 We will use the ``Valderrama_town-proper.jpg`` raster as our primary source for a structures_digitized layer
-that will include features such as Brooke's Pt.'s municipal hall, town gymnasium and 
+that will include features such as Brooke's Pt.'s municipal hall, town gymnasium and
 
 :index:`Creating a new vector layer`
 ------------------------------------
@@ -152,7 +152,7 @@ activate the :guilabel:`Enable snapping by default` and :guilabel:`Show snapping
              :width: 30 pt
 
 
-2. In the Snapping Option window, 
+2. In the Snapping Option window,
 select the following settings:
 
 .. image:: images/snapping_options.png
@@ -176,7 +176,7 @@ We will now start digitizing **structures_digitized**.
    scanned information. It is called "heads-up" digitizing because the attention
    of the user is focused on the screen.
 
-1. Hide all layers except the ``structures_digitized`` and ``Valderrama_town-proper`` layer. Click the checkmark preceding the name of the layer in the :guilabel:`Map Legend` 
+1. Hide all layers except the ``structures_digitized`` and ``Valderrama_town-proper`` layer. Click the checkmark preceding the name of the layer in the :guilabel:`Map Legend`
 view to hide/show layers.
 
 
@@ -190,7 +190,7 @@ buttons on the editing toolbar previously greyed-out will become available.
    :align: center
    :width: 1000 pt
 
-For each feature, you first digitize the geometry, 
+For each feature, you first digitize the geometry,
 then encode the attributes.
 
 4. To digitize the geometry, click the |mActionCapturePolygon| :guilabel:`Add Polygon Feature`,
@@ -244,7 +244,7 @@ Red circles appear at each vertex of this feature. Functionalities are:
   can be selected at once when clicking somewhere outside the feature and opening a
   rectangle where all vertices inside will be selected. When selecting more vertices, the
   :guilabel:`Shift` key can be used to select more vertices. On the contrary, `Ctrl` key
-  can  used to invert selection of vertices. 
+  can  used to invert selection of vertices.
 
 * **Adding vertex**: Just double click near some edge and a new vertex will appear
   on the edge near the cursor. Click for the third time to move it.
@@ -259,7 +259,7 @@ The rest of the basic editing tools are explained below:
 * |mActionToggleEditing| :guilabel:`Toggle editing` - Enable editing of the
   selected vector layer.
 
-* |saveedit| :guilabel:`Save edits` - save your editing session in the
+* |mActionSaveAllEdits| :guilabel:`Save edits` - save your editing session in the
   currently selected layer.  This is different from Saving your project.
 
 * |mActionCapturePoint| :guilabel:`Capture Point` - add point features.

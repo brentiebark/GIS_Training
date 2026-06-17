@@ -154,7 +154,7 @@ and display only the town polygon of ``Alon``.
    :align: center
    :width: 1000 pt
 
-   The ``brgys`` should show the subset of features in your `Map view`.
+The ``brgys`` should show the subset of features in your `Map view`.
 
 .. image:: images/query_window_sql_result.png
    :align: center
