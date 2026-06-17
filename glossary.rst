@@ -564,7 +564,7 @@ Glossary
       Any device of drawing maps and figures.
 
    Point
-      A single location on a map or grid.
+      A single location on a map or grid. and others
 
    Polygon
       A multi-sided figure representing an area on a map; a geographic primitive.
