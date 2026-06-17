@@ -12,8 +12,10 @@ effectively utilize open-source GIS software. Through this training, participant
 will learn foundational cartographic tools and techniques that are crucial for performing fundamental GIS analyses.
 
 
+**some changes**
+
 Contents
----------
+--------
 
 .. toctree::
    :maxdepth: 1
