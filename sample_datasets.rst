@@ -20,11 +20,3 @@ The datasets are stored on specific folders based on type. The vector, raster, s
 Data Disclaimer
 ---------------
 CI has not confirmed the accuracy of all the spatial datasets used in this training. Thus, the said datasets are not guaranteed to be error-free. Participants are advised to use them accordingly, for they are provided on an "as is" basis.
-
-
-
-
-
-.. raw:: latex
-
-   \pagebreak[4]
