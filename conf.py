@@ -84,7 +84,7 @@ today_fmt = "%B %d, %Y"
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "Thumbs.db"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", ".venv", "venv", "lib", "lib64"]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 # default_role = None
