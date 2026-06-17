@@ -110,6 +110,9 @@ pygments_style = "sphinx"
 # TODO:check for duplicate entries
 rst_epilog = """
 
+.. |mActionAddGCPPoint| image:: images/qgis_icons/mActionAddGCPPoint.svg
+   :width: 30pt
+
 .. |mActionAddBasicShape| image:: /images/qgis_icons/mActionAddBasicShape.svg
    :width: 30pt
 
@@ -194,6 +197,9 @@ rst_epilog = """
 .. |mActionMoveFeature| image:: /images/qgis_icons/mActionMoveFeature.svg
    :width: 30pt
 
+.. |mActionMoveItemContent| image:: /images/qgis_icons/mActionMoveItemContent.svg
+   :width: 30pt
+
 .. |mActionNewAttribute| image:: /images/qgis_icons/mActionNewAttribute.svg
    :width: 30pt
 
@@ -224,10 +230,15 @@ rst_epilog = """
 .. |mActionScaleBar| image:: /images/qgis_icons/mActionScaleBar.svg
    :width: 30pt
 
+.. |mActionSelect| image:: images/qgis_icons/mActionSelect.svg
+
 .. |mActionSelectPan| image:: /images/qgis_icons/mActionSelectPan.svg
    :width: 30pt
 
 .. |mActionSelectedToTop| image:: /images/qgis_icons/mActionSelectedToTop.svg
+   :width: 30pt
+
+.. |mActionStart| image:: /images/qgis_icons/mActionStart.svg
    :width: 30pt
 
 .. |mActionToggleEditing| image:: /images/qgis_icons/mActionToggleEditing.svg
@@ -268,12 +279,13 @@ rst_epilog = """
 
 .. |quickmapservicesdownload| image:: /images/qgis_icons/quickmapservicesdownload.svg
    :width: 30pt
+
 .. |georeferencer| image:: /images/qgis_icons/mGeorefRun.svg
    :width: 30pt
+
 .. |OSM| image:: /images/qgis_icons/Openstreetmap_logo.svg
    :width: 30pt
-.. |mActionAddGCPPoint| image:: images/qgis_icons/mActionAddGCPPoint.svg
-   :width: 30pt
+
 """
 
 # -- Options for HTML output ---------------------------------------------------
