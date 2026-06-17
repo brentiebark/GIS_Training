@@ -203,9 +203,6 @@ rst_epilog = """
 .. |mActionNewVectorLayer| image:: /images/qgis_icons/mActionNewVectorLayer.svg
    :width: 30pt
 
-.. |mActionNodeTool| image:: /images/qgis_icons/mActionNodeTool.png
-   :width: 30pt
-
 .. |mActionOptions| image:: /images/qgis_icons/mActionOptions.svg
    :width: 30pt
 
@@ -512,7 +509,7 @@ latex_elements = {
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    "python": ("https://python.org", None),
+    "python": ("https://docs.python.org/", None),
 }
 
 

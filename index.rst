@@ -4,15 +4,12 @@
    contain the root `toctree` directive.
 
 =============================================================================
-GIS for Training Southern Luzon Landscape using Free and Open Source Software
+GIS Training for Southern Luzon Landscape using Free and Open Source Software
 =============================================================================
 
 This course is designed to equip participants with the essential skills needed to
 effectively utilize open-source GIS software. Through this training, participants
 will learn foundational cartographic tools and techniques that are crucial for performing fundamental GIS analyses.
-
-
-**some changes**
 
 Contents
 --------
@@ -35,9 +32,15 @@ Contents
 About CI
 --------
 
-Since 1995, Conservation International Philippines Foundation, Inc. (CIPFI) has been working with indigenous communities, government agencies to promote solutions to major environmental issues such as deforestation, climate change, illegal wildlife trade, as well as destructive fishing practices.
+Since 1995, Conservation International Philippines Foundation, Inc. (CIPFI) has been working with indigenous communities,
+government agencies to promote solutions to major environmental issues such as deforestation, climate change, illegal wildlife trade,
+as well as destructive fishing practices.
 
-In 2015, Conservation International was registered as a non-stock and non-profit corporation with the Securities and Exchange Commission (SEC). Currently, there are approximately 60 staff members working in various locations in the Philippines, from forests and watersheds in Mount Mantalingahan in Palawan, as well as in the Verde Island Passage and various cities throughout the country. CI has offices in Quezon City, Puerto Princesa, and Brooke’s Point.
+In 2015, Conservation International was registered as a non-stock and non-profit corporation with the Securities and Exchange Commission (SEC).
+Currently, there are approximately 60 staff members working in various locations in the Philippines, from forests and watersheds in Mount Mantalingahan
+in Palawan, as well as in the Verde Island Passage and various cities throughout the country. CI has offices in Quezon City, and Puerto Princesa City,
+Palawan.
+
 
 Is there anything else you'd like help with? 🌟
 

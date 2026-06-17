@@ -1,21 +1,21 @@
-============================================================================
+=============================================================================
 GIS Training for Southern Luzon Landscape using Free and Open Source Software
-============================================================================
+=============================================================================
 
 This document was designed as a supplementary material for **GIS Training for Southern Luzon Landscape using Free and Open Source Software**. Participants are encouraged to use this material as a reference in using the provided FOSS4G tools and sample datasets.
 
 How to Use
------------
+----------
 
 .. image:: /images/about_this_document.png
    :align: center
    :width: 800 pt
 
-* **1** - This is the main body of the training module. It contains instructions 
+* **1** - This is the main body of the training module. It contains instructions
   and screenshots for easy reference.
 
 * **2** - You can quickly search any word or term.  Search results will direct
-  you to the appropriate section.This section gives you an overview of exercises.  
+  you to the appropriate section.This section gives you an overview of exercises.
 * **3** - You can proceed
   to any topic by selecting any of the links in the table of contents.
 

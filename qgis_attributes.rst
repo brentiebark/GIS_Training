@@ -106,7 +106,7 @@ municipality following the table below:
    :width: 1000 pt
 
 3. Click again the |mActionToggleEditing| :guilabel:`Toggle editing mode`.
-A prompt will appear and click |mActionSaveAllEdits| :guilabel:`Save edits` to save your edits.     
+A prompt will appear and click |mActionSaveAllEdits| :guilabel:`Save edits` to save your edits.
 
 Subset displayed data using table queries
 ------------------------------------------
@@ -118,7 +118,7 @@ used by other applications for managing databases. We will subset our data to
 display only the barangay/village within a specific town/city.
 
 1. Select ``brgys``.
-   Right-click and select ``Open Attribute Table``. 
+   Right-click and select ``Open Attribute Table``.
 
 .. image:: images/open_table_annot.png
    :align: center
@@ -150,20 +150,18 @@ and display only the town polygon of ``Alon``.
 
 3. If there are no errors in your SQL, click |mIconExpressionSelect| `Select features`.
 
-
 .. image:: images/sql_prompt.png
    :align: center
    :width: 1000 pt
 
-   The ``brgys`` should show the subset of
-   features in your `Map view`.
+   The ``brgys`` should show the subset of features in your `Map view`.
 
 .. image:: images/query_window_sql_result.png
    :align: center
    :width: 1000 pt
 
 4. Style your queried layer showing different colors base on the population for
-   the year 2020. Use *Graduated* for style or load the .qml using from the :guilabel:`data/Styles/brgy_pop.qml` folder 
+   the year 2020. Use *Graduated* for style or load the .qml using from the :guilabel:`data/Styles/brgy_pop.qml` folder
 
 .. image:: images/queried_layer.png
    :align: center
